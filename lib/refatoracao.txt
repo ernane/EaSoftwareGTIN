@@ -1,0 +1,13 @@
+Internalizar Variável Temporária
+
+Substituir Variável Temporária por Consulta
+
+Introduzir Variável Explicativa
+
+Extrair Método
+
+Obsessão Primitiva
+
+Inveja dos Dados
+
+Classes Grandes
