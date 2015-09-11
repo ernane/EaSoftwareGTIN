@@ -13,31 +13,19 @@ public class Gtin {
 	private long id;
 
 	@ManyToOne
-	private Produto produto;
+	private ClasseGtin classegtin;
 
-	private String classe;
 	private String nome;
 	private String descricao;
 	private long gtinTributavel;
 	private long gtinComercial;
-	private String unidade;
-	private int quantidade;
-	private double preco;
 
-	public Produto getProduto() {
-		return produto;
+	public ClasseGtin getClasseGtin() {
+		return classegtin;
 	}
 
-	public void setProduto(Produto produto) {
-		this.produto = produto;
-	}
-
-	public String getClasse() {
-		return classe;
-	}
-
-	public void setClasse(String classe) {
-		this.classe = classe;
+	public void setProduto(ClasseGtin classegtin) {
+		this.classegtin = classegtin;
 	}
 
 	public String getNome() {
@@ -70,29 +58,5 @@ public class Gtin {
 
 	public void setGtinComercial(long gtinComercial) {
 		this.gtinComercial = gtinComercial;
-	}
-
-	public String getUnidade() {
-		return unidade;
-	}
-
-	public void setUnidade(String unidade) {
-		this.unidade = unidade;
-	}
-
-	public int getQuantidade() {
-		return quantidade;
-	}
-
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
-	}
-
-	public double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
 	}
 }

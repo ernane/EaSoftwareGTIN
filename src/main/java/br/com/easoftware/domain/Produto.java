@@ -20,7 +20,7 @@ public class Produto {
 	private String Descricao;
 	
 	@OneToMany(mappedBy="produto",cascade=CascadeType.PERSIST)
-    private List<Gtin> gtins = new ArrayList<Gtin>();
+    private List<ClasseGtin> classesgtins = new ArrayList<ClasseGtin>();
 
 	public String getNome() {
 		return nome;
@@ -38,12 +38,12 @@ public class Produto {
 		Descricao = descricao;
 	}
 	
-	public List<Gtin> getGtins() {
-		return gtins;
+	public List<ClasseGtin> getClassesGtins() {
+		return classesgtins;
 	}
 
-	public void setGtins(List<Gtin> gtins) {
-		this.gtins = gtins;
+	public void setGtins(List<ClasseGtin> classesgtins) {
+		this.classesgtins = classesgtins;
 	}
 
 }
