@@ -7,33 +7,14 @@ import javax.persistence.Persistence;
 
 public class GtinProduto {
 
+	/*
 	public void cadastraProduto(Produto produto) {
-
-		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("EaSoftwareGTIN");
-		EntityManager em = emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-
-		tx.begin();
-		em.persist(produto);
-		tx.commit();
-		em.close();
-
+		// Movido para Classe ProdutoDAO
 	}
 
 	public void cadastraGtin(Gtin gtin) {
-
-		EntityManagerFactory emf = Persistence
-				.createEntityManagerFactory("EaSoftwareGTIN");
-		EntityManager em = emf.createEntityManager();
-		EntityTransaction tx = em.getTransaction();
-
-		tx.begin();
-		em.persist(gtin);
-		tx.commit();
-		em.close();
-
-	}
+		// Movido para Classe GtinDAO
+	}*/
 	
 	public double aplicaReducaoPorUnidade(Gtin gtin, String unidade) {
 		double valor = gtin.getPreco() * gtin.getQuantidade();
