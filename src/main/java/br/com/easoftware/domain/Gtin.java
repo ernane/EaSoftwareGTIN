@@ -1,9 +1,14 @@
 package br.com.easoftware.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Gtin {
@@ -14,6 +19,9 @@ public class Gtin {
 
 	@ManyToOne
 	private ClasseGtin classegtin;
+	
+	@OneToMany(mappedBy="gtin",cascade=CascadeType.PERSIST)
+    private List<PrecoGtin> precosgtins = new ArrayList<PrecoGtin>();
 
 	private String nome;
 	private String descricao;
@@ -58,5 +66,13 @@ public class Gtin {
 
 	public void setGtinComercial(long gtinComercial) {
 		this.gtinComercial = gtinComercial;
+	}
+	
+	public List<PrecoGtin> getPrecoGtins() {
+		return precosgtins;
+	}
+
+	public void setGtins(List<PrecoGtin> precosgtins) {
+		this.precosgtins = precosgtins;
 	}
 }

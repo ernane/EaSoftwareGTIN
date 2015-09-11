@@ -1,8 +1,4 @@
-Internalizar Variável Temporária
-
-Substituir Variável Temporária por Consulta
-
-Introduzir Variável Explicativa
+INTERNALIZAR VARIÁVEL TEMPORÁRIA, SUBSTITUIR VARIÁVEL TEMPORÁRIA POR CONSULTA, INTRODUZIR VARIÁVEL EXPLICATIVA
 
 Extrair Método
 
