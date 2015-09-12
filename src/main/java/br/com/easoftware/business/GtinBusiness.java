@@ -4,7 +4,7 @@ import br.com.easoftware.domain.PrecoGtin;
 
 public class GtinBusiness {
 
-	public double aplicaReducaoPorUnidade(PrecoGtin precogtin, String unidade) {
+	public double aplicaReducaoPorUnidade(double valor, String unidade) {
 		double desconto;
 
 		switch (unidade) {
@@ -24,10 +24,10 @@ public class GtinBusiness {
 			desconto = 0;
 		}
 
-		return getValorGtin(precogtin) - (desconto * getValorGtin(precogtin));
+		return valor - (desconto * valor);
 	}
 
-	public double aplicaReducaoPorUF(PrecoGtin precogtin, String uf) {
+	public double aplicaReducaoPorUF(double valor, String uf) {
 		double desconto;
 		
 		switch (uf) {
@@ -41,7 +41,7 @@ public class GtinBusiness {
 			desconto = 0.017;
 		}
 		
-		return getValorGtin(precogtin) - (desconto * getValorGtin(precogtin));
+		return  valor - (desconto * valor);
 	}
 
 	private double getValorGtin(PrecoGtin precogtin) {
